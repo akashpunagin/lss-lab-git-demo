@@ -1,0 +1,16 @@
+eval `ssh-agent -s`
+# check if agent is running, should show the pid
+
+ssh-agent -s
+
+exec ssh-agent bash
+# add bash to ssh agent
+
+
+ssh-add new_key
+# add key to ssh
+
+ssh -T git@github.com
+# check ssh connectivity with git
+
+
